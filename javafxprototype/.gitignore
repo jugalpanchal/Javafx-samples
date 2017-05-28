@@ -1,2 +1,5 @@
 /.gradle/
 /bin/
+/gradle/wrapper/
+/gradlew
+/gradlew.bat
