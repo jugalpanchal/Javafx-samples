@@ -15,6 +15,9 @@ import javafx.util.Callback;
 public class AutoMobileAppController extends BaseController {
 
 	@FXML
+	private FooterController footerController;
+	
+	@FXML
 	private List<CompanyModel> companies = new ArrayList<>();
 	
 	@FXML	
@@ -39,9 +42,7 @@ public class AutoMobileAppController extends BaseController {
 			
 			@Override
 			public ListCell<CompanyModel> call(ListView<CompanyModel> param) {
-				
 				return new ListCell<CompanyModel>() {
-					
 					@Override
 					protected void updateItem(CompanyModel item, boolean empty) {
 						super.updateItem(item, empty);
@@ -55,6 +56,4 @@ public class AutoMobileAppController extends BaseController {
 			}
 		});
 	}
-	
-	
 }

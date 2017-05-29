@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.jugalpanchal.javafxprototype.controllers.FooterController">
+	<Label fx:id="lblStatus" />
+	
+	
 </AnchorPane>
 

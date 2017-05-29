@@ -7,7 +7,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.cell.*?> 
 <?import javafx.collections.*?> 
-<?import fxmltableview.*?> 
+<?import fxmltableview.*?>
 
 <VBox xmlns:fx="http://javafx.com/fxml/1"
 	fx:controller="com.jugalpanchal.javafxprototype.controllers.AutoMobileAppController">
@@ -17,18 +17,23 @@
 			<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
 		</padding>
 		<Label GridPane.columnIndex="0" GridPane.rowIndex="0" text="Company" />
-		<ComboBox fx:id="cbCompanies" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+		<ComboBox fx:id="cbCompanies" GridPane.columnIndex="1"
+			GridPane.rowIndex="0" />
 		<Label GridPane.columnIndex="2" GridPane.rowIndex="0" text="Car" />
 		<ComboBox GridPane.columnIndex="3" GridPane.rowIndex="0" />
 
-		<TableView fx:id="tvVariants" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="4">
-		<columns>
-          <TableColumn text="Variant Name">
-          </TableColumn>
-          <TableColumn text="Price">
-          </TableColumn>
-     </columns>  
+		<TableView fx:id="tvVariants" GridPane.columnIndex="0"
+			GridPane.rowIndex="1" GridPane.columnSpan="4">
+			<columns>
+				<TableColumn text="Variant Name">
+				</TableColumn>
+				<TableColumn text="Price">
+				</TableColumn>
+			</columns>
 		</TableView>
+
 	</GridPane>
+
+	<fx:include source="FooterView.fxml" />
 </VBox>
 
