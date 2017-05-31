@@ -8,6 +8,7 @@
 <?import javafx.scene.control.cell.*?> 
 <?import javafx.collections.*?> 
 <?import fxmltableview.*?>
+<?import com.jugalpanchal.javafxprototype.models.*?>
 
 <VBox xmlns:fx="http://javafx.com/fxml/1"
 	fx:controller="com.jugalpanchal.javafxprototype.controllers.AutoMobileAppController">
@@ -25,11 +26,24 @@
 		<TableView fx:id="tvVariants" GridPane.columnIndex="0"
 			GridPane.rowIndex="1" GridPane.columnSpan="4">
 			<columns>
-				<TableColumn text="Variant Name">
+				<TableColumn text="Id">
+					<cellValueFactory>
+						<PropertyValueFactory property="id" />
+					</cellValueFactory>
 				</TableColumn>
-				<TableColumn text="Price">
+				<TableColumn text="Name">
+					<cellValueFactory>
+						<PropertyValueFactory property="name" />
+					</cellValueFactory>
 				</TableColumn>
 			</columns>
+			<items>
+			    <FXCollections fx:factory="observableArrayList">
+			        <VariantModel id="101" name="LX"/>
+			        <VariantModel id="102" name="UX"/>
+			        <VariantModel id="103" name="ABS"/>
+			    </FXCollections>
+			</items>
 		</TableView>
 
 	</GridPane>
