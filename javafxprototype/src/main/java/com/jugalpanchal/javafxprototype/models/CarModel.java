@@ -1,14 +1,14 @@
 package com.jugalpanchal.javafxprototype.models;
 
-public class VariantModel extends BaseModel {
+public class CarModel extends BaseModel {
 	
 	private String name;
 
-	public VariantModel() {
+	public CarModel() {
 		super();
 	}
 
-	public VariantModel(long id, String name) {
+	public CarModel(long id, String name) {
 		super(id);
 		this.setName(name);
 	}

@@ -5,7 +5,7 @@ public class CompanyModel extends BaseModel {
 	private String name;
 
 	public CompanyModel() {
-
+		super();
 	}
 
 	public CompanyModel(long id, String name) {

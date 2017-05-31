@@ -39,9 +39,10 @@
 			</columns>
 			<items>
 			    <FXCollections fx:factory="observableArrayList">
-			        <VariantModel id="101" name="LX"/>
-			        <VariantModel id="102" name="UX"/>
-			        <VariantModel id="103" name="ABS"/>
+			        <VariantModel id="101" name="LE"/>
+			        <VariantModel id="102" name="SE"/>
+			        <VariantModel id="103" name="XLE"/>
+			        <VariantModel id="103" name="XSE"/>
 			    </FXCollections>
 			</items>
 		</TableView>
