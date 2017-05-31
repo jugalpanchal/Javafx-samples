@@ -4,12 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.jugalpanchal.javafxprototype.models.CompanyModel;
+import com.jugalpanchal.javafxprototype.models.VariantModel;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableView;
 import javafx.util.Callback;
 
 public class AutoMobileAppController extends BaseController {
@@ -22,6 +26,9 @@ public class AutoMobileAppController extends BaseController {
 	
 	@FXML	
 	private ComboBox<CompanyModel> cbCompanies;
+	
+	@FXML
+	private TableView<VariantModel> tvVariants;
 	
 	public AutoMobileAppController() {
 		super();
@@ -55,5 +62,11 @@ public class AutoMobileAppController extends BaseController {
 				};
 			}
 		});
+	}
+	
+	@FXML
+	private void addVariant() {
+		ObservableList<VariantModel> data = tvVariants.getItems();
+        data.add(new VariantModel(107L,"Unknow"));
 	}
 }

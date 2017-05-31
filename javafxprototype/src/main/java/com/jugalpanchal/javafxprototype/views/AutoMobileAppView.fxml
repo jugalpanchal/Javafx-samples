@@ -45,7 +45,7 @@
 			    </FXCollections>
 			</items>
 		</TableView>
-
+	<Button text="Add" GridPane.columnIndex="4" GridPane.rowIndex="2" onAction="#addVariant" />
 	</GridPane>
 
 	<fx:include source="FooterView.fxml" />
