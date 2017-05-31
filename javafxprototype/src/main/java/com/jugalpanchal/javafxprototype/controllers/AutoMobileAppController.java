@@ -3,8 +3,7 @@ package com.jugalpanchal.javafxprototype.controllers;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.jugalpanchal.javafxprototype.models.CompanyModel;
-import com.jugalpanchal.javafxprototype.models.VariantModel;
+import com.jugalpanchal.javafxprototype.models.*;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,35 +20,37 @@ public class AutoMobileAppController extends BaseController {
 	@FXML
 	private FooterController footerController;
 	
-	@FXML
-	private List<CompanyModel> companies = new ArrayList<>();
-	
 	@FXML	
 	private ComboBox<CompanyModel> cbCompanies;
+	
+	@FXML	
+	private ComboBox<CarModel> cbCars;
 	
 	@FXML
 	private TableView<VariantModel> tvVariants;
 	
 	public AutoMobileAppController() {
 		super();
-		
-		companies.add(new CompanyModel(101, "Honda"));
-		companies.add(new CompanyModel(102, "Toyota"));
-		companies.add(new CompanyModel(103, "Nissan"));
-		companies.add(new CompanyModel(104, "BMW"));
-	
 	}
 	
 	@FXML
 	private void initialize() {
+	
+		//Mock Data.
+		List<CompanyModel> companies = new ArrayList<>();
+		companies.add(new CompanyModel(101, "Honda"));
+		companies.add(new CompanyModel(102, "Toyota"));
+		companies.add(new CompanyModel(103, "Nissan"));
+		companies.add(new CompanyModel(104, "BMW"));
 		
-		cbCompanies.setItems(FXCollections.observableList(companies));
+		this.cbCompanies.setItems(FXCollections.observableList(companies));
 		
-		cbCompanies.setCellFactory(new Callback<ListView<CompanyModel>, ListCell<CompanyModel>>() {
+		this.cbCompanies.setCellFactory(new Callback<ListView<CompanyModel>, ListCell<CompanyModel>>() {
 			
 			@Override
 			public ListCell<CompanyModel> call(ListView<CompanyModel> param) {
 				return new ListCell<CompanyModel>() {
+					
 					@Override
 					protected void updateItem(CompanyModel item, boolean empty) {
 						super.updateItem(item, empty);
@@ -62,11 +63,24 @@ public class AutoMobileAppController extends BaseController {
 				};
 			}
 		});
+		
+		this.cbCompanies.getSelectionModel().selectFirst();
+		this.cbCars.getSelectionModel().selectFirst();
+	}
+	
+	@FXML
+	private void selectedCompany(ActionEvent companyEvent) {
+		System.out.println("selected Company");
+	}
+	
+	@FXML	
+	private void selectedCar(ActionEvent carEvent) {
+		System.out.println("selected Car");
 	}
 	
 	@FXML
 	private void addVariant() {
-		ObservableList<VariantModel> data = tvVariants.getItems();
-        data.add(new VariantModel(107L,"Unknow"));
+		ObservableList<VariantModel> variants = this.tvVariants.getItems();
+		variants.add(new VariantModel(105L,"LX"));
 	}
 }

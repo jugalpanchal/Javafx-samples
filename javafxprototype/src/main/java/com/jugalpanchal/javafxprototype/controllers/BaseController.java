@@ -1,5 +1,5 @@
 package com.jugalpanchal.javafxprototype.controllers;
 
-public class BaseController {
+public abstract class BaseController {
 
 }

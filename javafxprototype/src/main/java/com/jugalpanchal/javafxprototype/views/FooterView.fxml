@@ -6,7 +6,5 @@
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1"
 	fx:controller="com.jugalpanchal.javafxprototype.controllers.FooterController">
 	<Label fx:id="lblStatus" />
-	
-	
 </AnchorPane>
 
