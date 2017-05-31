@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
 public class FooterController extends BaseController {
 
 	@FXML
-	Label lblStatus;
+	private Label lblStatus;
 	
 	public FooterController() {
 		
@@ -14,6 +14,6 @@ public class FooterController extends BaseController {
 	
 	@FXML
 	private void initialize() {
-		lblStatus.setText("OK");
+		lblStatus.setText("Welcome!");
 	}
 }
