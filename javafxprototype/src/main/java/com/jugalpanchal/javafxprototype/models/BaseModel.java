@@ -1,6 +1,6 @@
 package com.jugalpanchal.javafxprototype.models;
 
-public class BaseModel {
+public abstract class BaseModel {
 
 	private long id;
 
